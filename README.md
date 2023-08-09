@@ -6,7 +6,7 @@ Predicting the movie ratings based on reviews. Making use of machine learning an
 - Keep reviews and ratings
 - Convert ratings in the range of 1,2,3
 - Then we take 20000 example from each class and keep them for the new dataset
-Word Embeddings
+## Word Embeddings
 - We load the pretrained GoogleNews-vectors-negative300.bin.gz from the same
 folder as the present working directory(pwd). And see its working on three
 examples:-
@@ -22,7 +22,7 @@ results on the previous 3 examples are:-
 - Overall the pre-trained GoogleNews-vectors-negative300.bin.gz performs better than
 the model I have trained one of the reasons is that for the examples listed above our
 model would not have that many instances of it as compared to the google one.
-Simple Models
+## Simple Models
 - Initially I do some pre-processing on the data like
   - Convert the review into lowercase using the lower() function
   - Removed the http and url links using regex
@@ -45,7 +45,7 @@ size 300
 According to me since TFIDF gives more importance to important words while
 word2vec takes the average of the words and hence I believe that TFIDF performs
 better
-Feed Forward Neural Networks
+## Feed Forward Neural Networks
 - Using pytorch we created a multilayer perceptron model
 - The model has 2 hidden layers of dimension 100 and 10 respectively
 - For part a:-
@@ -75,7 +75,7 @@ we can get better accuracies. But the average word embeddings outperform the 1st
 word embeddings since they take the entire review into consideration. Also they perform
 better than the perceptron for word2vec and TFIDF and is almost equal to the svm model
 using word2vec embeddings
-Recurrent Neural Networks
+## Recurrent Neural Networks
 - Use Pytorch nn module for using the RNN,GRU and LSTM modules
 - We use word embedding of size 20 and we pad the shorter reviews and truncate the
 longer reviews
